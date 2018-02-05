@@ -1,7 +1,9 @@
 package org.arek.logger;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -44,7 +46,8 @@ public class LoggerGenerator {
 				}
 							
 			}
-			current.delete();
+			
+			FileWriter fw = new FileWriter(current);
 			i = 0;
 			j++;
 		}
